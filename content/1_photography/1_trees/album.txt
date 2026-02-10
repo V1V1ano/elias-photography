@@ -2,7 +2,7 @@ Title: Trees
 
 ----
 
-Cover: - file://Jc0l1BA0i5z0QjRf
+Cover: - 'file://Jc0l1BA0i5z0QjRf'
 
 ----
 
@@ -10,7 +10,7 @@ Headline:
 
 ----
 
-Subheadline: This is a test
+Subheadline: I just want to hug trees
 
 ----
 
