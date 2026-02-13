@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 :root {
   --padding: 1.5rem;
   --color-black: #000;
@@ -38,7 +42,10 @@ img {
 body {
   padding: var(--padding);
   /* max-width: 70rem; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 li {
   list-style: none;
@@ -68,6 +75,12 @@ small {
 .color-grey {
   color: var(--color-text-grey);
 }
+.main {
+  flex: 1;
+  display: flex;
+  min-height: 0; /* important in flex layouts to prevent overflow weirdness */
+  padding-bottom: calc(var(--padding) + 3rem);
+}
 
 .header {
   position: sticky;
@@ -76,9 +89,9 @@ small {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+   /* margin-bottom: 6rem; */
   /* margin-right: -1rem;
   margin-left: -1rem; */
-  margin-bottom: 6rem;
   /* background-color: var(--color-background); */
 }
 
