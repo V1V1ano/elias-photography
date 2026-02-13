@@ -65,29 +65,35 @@
     */
     ?>
     <a class="logo" href="<?= $site->url() ?>">
-      <?= $site->title()->esc() ?> </br>
-      <?= $site->role()->esc() ?>
+      <span class="logo-inline"> <?= $site->title()->esc() ?> </span>
+      <span class="logo-inline"><?= $site->role()->esc() ?> </span>
     </a>
 
-    <nav class="menu">
-      <?php
-      /*
-        In the menu, we only fetch listed pages,
-        i.e. the pages that have a prepended number
-        in their foldername.
+    <div class="nav-group">
+      <div class="page-indicator"> pages: </div>
+      <nav class="menu">
+        <?php
+        /*
+          In the menu, we only fetch listed pages,
+          i.e. the pages that have a prepended number
+          in their foldername.
 
-        We do not want to display links to unlisted
-        `error`, `home`, or `sandbox` pages.
+          We do not want to display links to unlisted
+          `error`, `home`, or `sandbox` pages.
 
-        More about page status:
-        https://getkirby.com/docs/reference/panel/blueprints/page#statuses
-      */
-      ?>
-      <?php foreach ($site->children()->listed() as $item): ?>
-      <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
-      <?php endforeach ?>
-      <?php snippet('social') ?>
-    </nav>
+          More about page status:
+          https://getkirby.com/docs/reference/panel/blueprints/page#statuses
+
+          This snippet I cut, because of the social stuff
+          <?php snippet('social') ?> 
+        */
+        ?>
+        <?php foreach ($site->children()->listed() as $item): ?>
+        <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
+        <?php endforeach ?>
+        
+      </nav>
+    </div>
   </header>
 
   <main class="main">

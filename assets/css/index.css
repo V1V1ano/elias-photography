@@ -70,29 +70,49 @@ small {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: var(--padding);
+  z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-right: -1rem;
-  margin-left: -1rem;
+  /* margin-right: -1rem;
+  margin-left: -1rem; */
   margin-bottom: 6rem;
+  /* background-color: var(--color-background); */
 }
 
 .logo {
-  padding: 1rem;
+  /* padding: 1rem; */
   display: flex;
-  align-items: center;
-  font-weight: 600;
+  flex-direction: column;
+  align-items: left;
+  /* padding-top: 0.2rem; */
+  /* font-weight: 600; */
   cursor: pointer;
 }
 
+.logo-inline {
+  padding-bottom: 0.2rem; 
+  display: block;
+}
+
+.nav-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;   /* 👈 max distance between indicator and menu */
+}
+
+
 .menu {
   display: flex;
+  flex-direction: column;
 }
+
 .menu a {
-  padding: 1rem;
+  padding: 0.2rem; 
   display: block;
+
 }
 .menu a[aria-current] {
   text-decoration: underline;
@@ -318,10 +338,20 @@ hr {
 }
 
 .footer {
-  padding: 9rem 0 6rem;
-  line-height: 1.5em;
+  position: fixed;
+  left: var(--padding);
+  right: var(--padding);
+  bottom: var(--padding);
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-right: -1rem;
+  margin-left: -1rem; */
+  /* background-color: var(--color-background); */
 }
-.footer:before {
+
+/* .footer:before {
   content: "";
   display: block;
   width: 1.5rem;
@@ -343,7 +373,7 @@ hr {
 }
 .footer a:hover {
   color: var(--color-text);
-}
+} */
 
 
 .map {
