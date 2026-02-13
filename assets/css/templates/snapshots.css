@@ -48,6 +48,7 @@
 
 /* Controls are always in the same place (below stage) */
 .snapshots-counter {
+  font-family: var(--font-family-highlight);
   width: 100%;
   max-width: 90vw;
   margin-top: 2rem;
@@ -64,4 +65,14 @@
 .snapshots-btn {
   cursor: pointer;
   font-size: 2rem;
+  font-family: var(--font-family-highlight);
+  line-height: 1;
+}
+
+.snapshots-btn[data-prev]::before {
+  content: "<<< ";
+}
+
+.snapshots-btn[data-next]::before {
+  content: " >>>";
 }

@@ -1,0 +1,18 @@
+title: Snapshots
+icon: 📸
+
+sections:
+  gallery:
+    type: files
+    headline: Gallery images
+    help: Upload images here. They will appear in the Snapshots gallery on the website.
+    layout: cards
+    size: tiny
+    image:
+      ratio: 1/1
+      cover: true
+    sortBy: sort asc
+    uploads:
+      template: image
+    accept:
+      extension: jpg, jpeg, png, webp, gif
