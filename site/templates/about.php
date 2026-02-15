@@ -1,51 +1,53 @@
-<?php
-/*
-  Templates render the content of your pages.
-
-  They contain the markup together with some control structures
-  like loops or if-statements. The `$page` variable always
-  refers to the currently active page.
-
-  To fetch the content from each field we call the field name as a
-  method on the `$page` object, e.g. `$page->title()`.
-
-  This about page example uses the content from our layout field
-  to create most parts of the page and keeps it modular. Only the
-  contact box at the bottom is pre-defined with a set of fields
-  in the about.yml blueprint.
-
-  Snippets like the header and footer contain markup used in
-  multiple templates. They also help to keep templates clean.
-
-  More about templates: https://getkirby.com/docs/guide/templates/basics
-*/
-?>
 <?php snippet('header') ?>
-<?php snippet('intro') ?>
-<?php snippet('layouts', ['field' => $page->layout()])  ?>
 
-<aside class="contact">
-  <h2 class="h1">Get in contact</h2>
-  <div class="grid" style="--gutter: 1.5rem">
-    <section class="column text" style="--columns: 4">
-      <h3>Address</h3>
-      <?= $page->address() ?>
-    </section>
-    <section class="column text" style="--columns: 4">
-      <h3>Email</h3>
-      <p><?= Html::email($page->email()) ?></p>
-      <h3>Phone</h3>
-      <p><?= Html::tel($page->phone()) ?></p>
-    </section>
-    <section class="column text" style="--columns: 4">
-      <h3>On the web</h3>
-      <ul>
-        <?php foreach ($page->social()->toStructure() as $social): ?>
-        <li><?= Html::a($social->url(), $social->platform()) ?></li>
-        <?php endforeach ?>
-      </ul>
-    </section>
+
+<?php
+  $image = $page->images()->filterBy('type', 'image')->sortBy('sort', 'asc')->first();
+?>
+
+<article class="about">
+  <div class="about-layout">
+
+    <div class="about-left">
+      <header class="about-title">
+        <h1><?= $page->name()->or($page->title())->esc() ?></h1>
+      </header>
+
+      <section class="about-texts">
+        <div class="about-text about-text--top text">
+          <?= $page->textupper()->kt() ?>
+        </div>
+
+        <div class="about-text about-text--bottom">
+          <h2 class="clients-title">
+            <?= $page->clientsheadline()->or('Clients')->esc() ?>
+          </h2>
+
+          <?php if ($page->clients()->isNotEmpty()): ?>
+            <ul class="clients-list">
+              <?php foreach ($page->clients()->toStructure() as $client): ?>
+                <li class="clients-item">
+                  <span class="clients-icon" aria-hidden="true">✶</span>
+                  <span class="clients-name"><?= $client->name()->esc() ?></span>
+                </li>
+              <?php endforeach ?>
+            </ul>
+          <?php endif ?>
+        </div>
+      </section>
+    </div>
+
+    <div class="about-media">
+      <?php if ($image): ?>
+        <img
+          class="about-img"
+          src="<?= $image->resize(1600)->url() ?>"
+          alt="<?= $image->alt()->or($image->filename())->esc() ?>"
+        >
+      <?php endif ?>
+    </div>
+
   </div>
-</aside>
+</article>
 
 <?php snippet('footer') ?>

@@ -12,6 +12,7 @@ html, body {
   --color-black: #000;
   --color-white: #fff;
   --color-grey: #777;
+  --color-blue: #3A67FD;
   --color-light: #efefef;
   --color-text: var(--color-black);
   --color-text-grey: var(--color-grey);
@@ -93,7 +94,17 @@ small {
    /* margin-bottom: 6rem; */
   /* margin-right: -1rem;
   margin-left: -1rem; */
-  /* background-color: var(--color-background); */
+  background-color: var(--color-background); 
+}
+
+@media (min-width: 60rem) {
+  .header {
+    background-color: transparent; 
+  }
+
+  .footer {
+    background-color: transparent;
+  }
 }
 
 .logo {
@@ -362,7 +373,7 @@ hr {
   justify-content: space-between;
   /* margin-right: -1rem;
   margin-left: -1rem; */
-  /* background-color: var(--color-background); */
+  background-color: var(--color-background); 
 }
 
 /* .footer:before {
