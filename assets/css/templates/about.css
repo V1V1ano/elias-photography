@@ -7,8 +7,6 @@
 
 /* MOBILE (stacked) */
 .about-layout {
-  padding-top: var(--padding);
-  padding-bottom: var(--padding);
   display: flex;
   flex-direction: column;
   gap: 2rem;

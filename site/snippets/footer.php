@@ -14,7 +14,7 @@
   <footer class="footer">
       <div class="logo">
         <span class="logo-inline"> call: +49 17672270664 </span>
-        <a class="logo-inline" href="mailto:elias.bernhardt@outlook.com">mail: elias.bernhardt@outlook.com</a>
+        <a class="logo-inline" href="mailto:elias.bernhardt@outlook.com">elias.bernhardt@outlook.com</a>
       </div>
 
 
