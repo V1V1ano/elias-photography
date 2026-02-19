@@ -1,0 +1,57 @@
+title: Project
+icon: page
+  
+
+columns:
+- width: 1/2
+  fields:
+      type:
+        label: type
+        type: text
+        help: for example photo or video
+
+- width: 1/2
+  fields:
+      occasion:
+        label: Occasion
+        type: text
+        help: for example tour, event, studio shoot
+
+- width: 1/3
+  fields:
+      year:
+        label: year
+        type: text
+
+- width: 1/3
+  fields:
+      city:
+        label: City
+        type: text
+
+- width: 1/3
+  fields:
+      place:
+        label: Specific place
+        type: text
+
+- width: 2/3
+  sections:
+      content:
+        type: fields
+        fields:
+          description:
+            label: Description
+            type: textarea
+            size: medium
+
+- width: 1/3
+  sections:
+      media:
+        headline: Photos
+        type: files
+        layout: cards
+        size: small
+        info: "{{ file.dimensions }}"
+        image:
+          cover: true

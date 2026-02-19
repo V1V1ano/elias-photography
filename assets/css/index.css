@@ -128,7 +128,8 @@ small {
 
 }
 .menu a[aria-current] {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: var(--color-blue);
 }
 
 .social {
