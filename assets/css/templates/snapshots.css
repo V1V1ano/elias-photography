@@ -50,13 +50,13 @@
 .snapshots-counter {
   font-family: var(--font-family-highlight);
   width: 100%;
-  max-width: 90vw;
+  /* max-width: 90vw; */
   margin-top: 2rem;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 4rem;
 
   font-size: 2.5rem;
   line-height: 1;
@@ -64,15 +64,51 @@
 
 .snapshots-btn {
   cursor: pointer;
-  font-size: 2rem;
-  font-family: var(--font-family-highlight);
-  line-height: 1;
+  border: 0;
+  background: transparent;
+  padding: 0;
+
+  /* icon button sizing */
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.snapshots-btn[data-prev]::before {
-  content: "<<< ";
+/* prev / next icons */
+.snapshots-btn[data-prev] {
+  background-image: url("/assets/icons/arrow_left.svg");
 }
 
-.snapshots-btn[data-next]::before {
-  content: " >>>";
+.snapshots-btn[data-next] {
+  background-image: url("/assets/icons/arrow_right.svg");
+}
+
+/* optional hover/focus styles */
+.snapshots-btn:hover {
+  opacity: 0.8;
+}
+
+.snapshots-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.snapshots-number {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (min-width: 60rem) {
+
+  .snapshots-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .snapshots-counter {
+    justify-content: center;
+  }
 }

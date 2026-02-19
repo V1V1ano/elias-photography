@@ -36,7 +36,9 @@
 
         <figcaption class="snapshots-counter" aria-live="polite">
             <button class="snapshots-btn" type="button" data-prev aria-label="Previous photo"></button>
-            <span data-count>1</span>/<span data-total><?= $total ?></span>
+            <span class="snapshots-number"> 
+                <span data-count>1</span> / <span data-total><?= $total ?></span>
+              </span>
             <button class="snapshots-btn" type="button" data-next aria-label="Next photo"></button>
         </figcaption>
       </figure>
