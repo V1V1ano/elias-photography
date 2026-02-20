@@ -26,6 +26,10 @@ Description: Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und K
 
 ----
 
+Photosections: [{"content":{"image":["file://vofnk2exqawldqkf"]},"id":"9aa90baa-f257-42aa-89d2-f60b69a7a916","isHidden":false,"type":"oneImage"},{"content":{"left":["file://d2djo1chvrxjqjaw"],"right":["file://wvpv1dwehsi7cnrn"]},"id":"bf72f8a9-5222-476a-b875-d39fca9e6874","isHidden":false,"type":"twoImages"}]
+
+----
+
 Contentblocks: [{"content":{"image":["file://vbuvwyt1khvss1ov"],"alt":""},"id":"63951fd9-38fe-4ee8-b4d4-c41f6afd9254","isHidden":false,"type":"singleImage"},{"content":{"images":["file://szmhdzrmvz7uvmxs","file://ax2lwdd86jphqsyj"]},"id":"101fe878-a2d3-4252-809c-6aaa59ce89bf","isHidden":false,"type":"doubleImage"},{"content":{"video":["file://t4ubrc6azwanaa4k"]},"id":"d0c515c5-e7bd-48b9-8e26-1344071bd0bd","isHidden":false,"type":"singleVideo"}]
 
 ----

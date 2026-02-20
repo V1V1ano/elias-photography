@@ -1,42 +1,41 @@
 title: Project
 icon: page
-  
 
 columns:
-- width: 1/2
-  fields:
+  - width: 1/2
+    fields:
       type:
-        label: type
+        label: Type
         type: text
         help: for example photo or video
 
-- width: 1/2
-  fields:
+  - width: 1/2
+    fields:
       occasion:
         label: Occasion
         type: text
         help: for example tour, event, studio shoot
 
-- width: 1/3
-  fields:
+  - width: 1/3
+    fields:
       year:
-        label: year
+        label: Year
         type: text
 
-- width: 1/3
-  fields:
+  - width: 1/3
+    fields:
       city:
         label: City
         type: text
 
-- width: 1/3
-  fields:
+  - width: 1/3
+    fields:
       place:
         label: Specific place
         type: text
 
-- width: 2/3
-  sections:
+  - width: 2/3
+    sections:
       content:
         type: fields
         fields:
@@ -45,8 +44,50 @@ columns:
             type: textarea
             size: medium
 
-- width: 1/3
-  sections:
+          photoSections:
+            label: Photo sections
+            type: blocks
+            help: Add one or two-image sections. You can add as many as you want.
+            fieldsets:
+              oneImage:
+                label: 1-picture component
+                icon: image
+                fields:
+                  image:
+                    label: Image
+                    type: files
+                    multiple: false
+                    layout: cards
+                    size: small
+                    query: page.images
+                    uploads:
+                      template: image
+
+              twoImages:
+                label: 2-picture component
+                icon: images
+                fields:
+                  left:
+                    label: Left image
+                    type: files
+                    multiple: false
+                    layout: cards
+                    size: small
+                    query: page.images
+                    uploads:
+                      template: image
+                  right:
+                    label: Right image
+                    type: files
+                    multiple: false
+                    layout: cards
+                    size: small
+                    query: page.images
+                    uploads:
+                      template: image
+
+  - width: 1/3
+    sections:
       media:
         headline: Photos
         type: files

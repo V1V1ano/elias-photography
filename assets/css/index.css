@@ -107,7 +107,8 @@ small {
 
 .logo-inline {
   padding-bottom: 0.2rem; 
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-group {
@@ -123,7 +124,7 @@ small {
 }
 
 .menu a {
-  padding: 0.2rem; 
+  padding-bottom: 0.2rem; 
   display: block;
 
 }
