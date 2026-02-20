@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <article class="project">
-  <h1><?= $page->title()->esc() ?></h1>
+  <h1 class="project-title"><?= $page->title()->esc() ?></h1>
 
   <div class="project-metadata"> 
     <span class="project-metadata-row1"> 

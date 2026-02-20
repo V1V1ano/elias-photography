@@ -1,3 +1,19 @@
+.project {
+    width: 100%;
+}
+
+.project-title {
+  font-family: var(--font-family-highlight);
+  font-size: 3.6rem;
+}
+
+.project-metadata {
+    padding-bottom: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 .project-metadata-row1 {
     display: flex;
     justify-content: space-between;
@@ -5,5 +21,9 @@
 
 .project-metadata-row2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: spac77e-between;
+}
+
+.project-desc {
+    padding-top: var(--padding);
 }
