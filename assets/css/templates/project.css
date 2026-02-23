@@ -1,3 +1,7 @@
+body {
+    padding-bottom: var(--footer-h);
+}
+
 .project {
     width: 100%;
 }
@@ -61,11 +65,36 @@
 }
 
 @media (min-width: 60rem) {
-  .project-image--two {
-  }
+    .project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    }
 
-  /* keep one-image behavior as you already have */
-  .project-image--one img {
+    .project-image--one{
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-image--one img{
+    height: 50vw;
+    width: auto;
     
-  }
+    }
+
+    .project-image--two{
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .project-image--two img{
+        height: 50vw;
+        width: auto;
+        max-width: none;
+        object-fit: contain;
+    }
+
+
+
+  
 }

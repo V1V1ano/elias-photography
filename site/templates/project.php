@@ -65,7 +65,8 @@
   <?php endif; ?>
 
   <?php if ($page->description()->isNotEmpty()): ?>
-    <p class="project-desc"><?= $page->description()->kt() ?></p>
+    
+    <p class="project-desc"> <p> what about/ </p> </br><?= $page->description()->kt() ?></p>
   <?php endif; ?>
 
 </article>
