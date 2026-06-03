@@ -1,19 +1,36 @@
 <?php snippet('header') ?>
 
-<article class="project">
-  <h1 class="project-title"><?= $page->title()->esc() ?></h1>
+<?php $titleImage = $page->titleImage()->toFile(); ?>
 
-  <div class="project-metadata">
-    <span class="project-metadata-row1">
-      <p><?= $page->type()->esc() ?></p>
-      <p><?= $page->occasion()->esc() ?></p>
-    </span>
-    <span class="project-metadata-row1">
-      <p><?= $page->year()->esc() ?></p>
-      <p><?= $page->city()->esc() ?></p>
-      <p><?= $page->place()->esc() ?></p>
-    </span>
-  </div>
+<article class="project">
+
+  <section class="project-hero">
+    <div class="project-hero__text">
+      <h1 class="project-title"><?= $page->title()->esc() ?></h1>
+
+      <div class="project-metadata">
+        <span class="project-metadata-row1">
+          <p><?= $page->type()->esc() ?></p>
+          <p><?= $page->occasion()->esc() ?></p>
+        </span>
+        <span class="project-metadata-row1">
+          <p><?= $page->year()->esc() ?></p>
+          <p><?= $page->city()->esc() ?></p>
+          <p><?= $page->place()->esc() ?></p>
+        </span>
+      </div>
+    </div>
+
+    <?php if ($titleImage): ?>
+      <figure class="project-hero__image">
+        <img
+          src="<?= $titleImage->url() ?>"
+          alt="<?= $titleImage->alt()->or($page->title())->esc() ?>"
+          loading="eager"
+        >
+      </figure>
+    <?php endif; ?>
+  </section>
 
   <?php if ($page->photoSections()->isNotEmpty()): ?>
     <section class="project-images">
@@ -65,8 +82,10 @@
   <?php endif; ?>
 
   <?php if ($page->description()->isNotEmpty()): ?>
-    
-    <p class="project-desc"> <p> what about/ </p> </br><?= $page->description()->kt() ?></p>
+    <div class="project-desc">
+      <p>what about/</p>
+      <?= $page->description()->kt() ?>
+    </div>
   <?php endif; ?>
 
 </article>

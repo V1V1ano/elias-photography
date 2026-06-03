@@ -47,13 +47,28 @@
 
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0;
 }
 
 .clients-item {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0.7rem 0;
+}
+
+.clients-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--color-blue);
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 /* fixed icon column width so all names align nicely */

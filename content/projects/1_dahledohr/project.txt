@@ -22,11 +22,15 @@ Place: ARYS Store
 
 ----
 
+Titleimage: - 'file://vofnk2exqawldqkf'
+
+----
+
 Description: Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans
 
 ----
 
-Photosections: [{"content":{"image":["file://vofnk2exqawldqkf"],"label":"Heftiger Teaser"},"id":"9aa90baa-f257-42aa-89d2-f60b69a7a916","isHidden":false,"type":"oneImage"},{"content":{"left":["file://53l5jhf2zdeinyzg"],"right":["file://d2djo1chvrxjqjaw"]},"id":"f7b96e7f-722e-4edd-867e-9cbd9cbfc1a7","isHidden":false,"type":"twoImages"}]
+Photosections: [{"content":{"image":["file://8wsicbbwcrwpsnbl"]},"id":"40ba4e95-ed69-4691-8b36-12e3d6d66071","isHidden":false,"type":"oneImage"},{"content":{"left":["file://53l5jhf2zdeinyzg"],"right":["file://d2djo1chvrxjqjaw"]},"id":"f7b96e7f-722e-4edd-867e-9cbd9cbfc1a7","isHidden":false,"type":"twoImages"}]
 
 ----
 
