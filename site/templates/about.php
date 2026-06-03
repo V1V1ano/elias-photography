@@ -27,7 +27,13 @@
             <ul class="clients-list">
               <?php foreach ($page->clients()->toStructure() as $client): ?>
                 <li class="clients-item">
-                  <span class="clients-icon" aria-hidden="true">✶</span>
+                  <span class="clients-icon" aria-hidden="true">
+                    <img
+                      class="clients-icon-img"
+                      src="<?= url('assets/icons/star.svg') ?>"
+                      alt=""
+                    >
+                  </span>
                   <span class="clients-name"><?= $client->name()->esc() ?></span>
                 </li>
               <?php endforeach ?>

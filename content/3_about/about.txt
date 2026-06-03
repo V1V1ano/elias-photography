@@ -3,6 +3,7 @@ Title: about
 ----
 
 Name: Elias Bernhardt
+
 ----
 
 Textupper:
@@ -27,6 +28,8 @@ Clients:
   name: 'Vivien Serve'
 -
   name: 'Jonathan Duhr'
+-
+  name: 'Katharina Fedde'
 
 ----
 
