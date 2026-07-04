@@ -150,15 +150,15 @@
     align-items: flex-start;
     justify-content: flex-end; /* keeps image visually on the right */
 
-    max-height: calc(90vh - (var(--padding) * 2) - (var(--padding) + 3rem));
+    height: calc(100vh - var(--header-chrome) - var(--footer-chrome));
     min-width: 0;
   }
 
-  /* Image: keep aspect ratio */
+  /* Image: fill container height, keep aspect ratio */
   .about-img {
-    max-height: 100%;
-    width: auto;           /* 👈 don’t force stretching */
-    height: auto;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
     display: block;
   }

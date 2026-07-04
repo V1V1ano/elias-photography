@@ -95,6 +95,7 @@ small {
 .header {
   position: sticky;
   top: 0;   
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -388,6 +389,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 20;
   padding-top: calc(var(--padding)/2);
   padding-left: var(--padding);
   padding-right: var(--padding);
