@@ -42,6 +42,12 @@ $projects = page('projects')->children()->listed();
         alt="<?= $fallback->alt()->esc() ?>"
       >
     </picture>
+
+    <?php if ($page->heroheadline()->isNotEmpty()): ?>
+      <h1 class="home-hero-headline">
+        <?= nl2br($page->heroheadline()->esc()) ?>
+      </h1>
+    <?php endif ?>
   </section>
 <?php endif ?>
 

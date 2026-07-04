@@ -44,14 +44,12 @@ sections:
         width: 1/2
         help: Full-screen image shown on desktop.
 
-      headline:
-        type: text
-        width: 1/2
-      gap:
-        width: 1/2
-      subheadline:
-        type: text
-        width: 1/2
+      heroheadline:
+        label: Hero headline
+        type: textarea
+        size: small
+        buttons: false
+        help: Big blue headline shown in the top-left of the hero.
 
   projects:
     headline: Projects
