@@ -55,6 +55,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  isolation: isolate; /* contain negative z-index of hero, allow blend to reach through */
 }
 li {
   list-style: none;
@@ -93,14 +94,38 @@ small {
 
 .header {
   position: sticky;
-  z-index: 1000;
   top: 0;   
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: var(--color-background); 
+  background-color: transparent;
   padding-top: var(--padding);
   padding-bottom: calc(var(--padding)/2);
+}
+
+/* text default: black on white content pages.
+   Over the hero, JS toggles body.hero-header-dark / hero-footer-dark
+   based on the hero image's brightness AND actual overlap with each bar. */
+.header .logo-inline,
+.header .page-indicator,
+.header .menu a,
+.footer .logo-inline {
+  color: var(--color-black);
+}
+
+body.hero-header-dark .header .logo-inline,
+body.hero-header-dark .header .page-indicator,
+body.hero-header-dark .header .menu a {
+  color: var(--color-white);
+}
+
+body.hero-footer-dark .footer .logo-inline {
+  color: var(--color-white);
+}
+
+/* accent color always wins */
+.header .menu a[aria-current] {
+  color: var(--color-blue);
 }
 
 
@@ -367,11 +392,10 @@ hr {
   padding-left: var(--padding);
   padding-right: var(--padding);
   padding-bottom: var(--padding);
-  z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: var(--color-background); 
+  background-color: transparent;
 }
 .map {
   --w: 2;

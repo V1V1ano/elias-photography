@@ -48,6 +48,10 @@
     '@auto'
   ]) ?>
 
+  <?= js([
+    'assets/js/index.js'
+  ], ['defer' => true]) ?>
+
   <?php
   /*
     The `url()` helper is a great way to create reliable

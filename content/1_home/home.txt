@@ -2,6 +2,14 @@ Title: home
 
 ----
 
+Heromobile: - 'file://y5k9hhtjx7ungcsb'
+
+----
+
+Herodesktop: - 'file://cw87n6mgg7fxcj9g'
+
+----
+
 Headline: Welcome to Kirby's Starterkit
 
 ----

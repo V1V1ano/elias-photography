@@ -15,6 +15,35 @@ sections:
   content:
     type: fields
     fields:
+      heromobile:
+        label: Hero image (mobile)
+        type: files
+        max: 1
+        multiple: false
+        layout: cards
+        image:
+          ratio: 9/16
+          cover: true
+        uploads:
+          template: image
+        query: page.images.template("image")
+        width: 1/2
+        help: Full-screen image shown on mobile.
+      herodesktop:
+        label: Hero image (desktop)
+        type: files
+        max: 1
+        multiple: false
+        layout: cards
+        image:
+          ratio: 16/9
+          cover: true
+        uploads:
+          template: image
+        query: page.images.template("image")
+        width: 1/2
+        help: Full-screen image shown on desktop.
+
       headline:
         type: text
         width: 1/2

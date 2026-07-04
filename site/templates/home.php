@@ -22,8 +22,28 @@
 <?php snippet('header') ?>
 
 <?php
+$mobile   = $page->heromobile()->toFile();
+$desktop  = $page->herodesktop()->toFile();
 $projects = page('projects')->children()->listed();
 ?>
+
+<?php if ($mobile || $desktop): ?>
+  <?php
+    $fallback = $mobile ?: $desktop;
+  ?>
+  <section class="home-hero">
+    <picture>
+      <?php if ($desktop): ?>
+        <source media="(min-width: 60rem)" srcset="<?= $desktop->resize(2400)->url() ?>">
+      <?php endif ?>
+      <img
+        class="home-hero-img"
+        src="<?= $fallback->resize(1400)->url() ?>"
+        alt="<?= $fallback->alt()->esc() ?>"
+      >
+    </picture>
+  </section>
+<?php endif ?>
 
 <ul class="home-project-list">
   <?php foreach ($projects as $project): ?>
