@@ -41,6 +41,23 @@ tabs:
               name:
                 width: 1/1
 
+          funworkheadline:
+            label: Fun work headline
+            type: text
+            placeholder: Fun work
+
+          funwork:
+            label: Fun work
+            type: structure
+            help: Add fun work entries. Each row becomes one line with a star icon.
+            fields:
+              name:
+                label: Name
+                type: text
+            columns:
+              name:
+                width: 1/1
+
   media:
     label: Image
     sections:

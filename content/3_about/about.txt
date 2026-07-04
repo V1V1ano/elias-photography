@@ -33,6 +33,19 @@ Clients:
 
 ----
 
+Funworkheadline: Fun work
+
+----
+
+Funwork:
+
+-
+  name: Mallorza
+-
+  name: 'I <3 Vivi'
+
+----
+
 Textlower: <p>Lower text…</p>
 
 ----

@@ -40,6 +40,12 @@
   gap: 2rem;
 }
 
+.about-text--bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* space between Clients list and Fun work list */
+}
+
 .clients-title {
   margin: 0 0 1rem 0;
   font-size: 2rem; /* tweak */
@@ -52,6 +58,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -62,9 +69,15 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   gap: 1rem;
   /* Einstellug mit Lines: padding: 0.7rem 0; */
-  padding: 0.3rem 0;
+  padding: 0.2rem 0;
+}
+
+.clients-item--reverse {
+  flex-direction: row-reverse;
 }
 
 .clients-item:not(:last-child)::after {
@@ -82,8 +95,6 @@
 
 /* fixed icon column width so all names align nicely */
 .clients-icon {
-  width: 2.5rem;
-  flex: 0 0 2.5rem;
   display: flex;
   align-items: center;
   line-height: 1;
@@ -96,9 +107,9 @@
   display: block;
 }
 
-/* name takes the remaining space */
+/* name sits at the opposite edge from the icon */
 .clients-name {
-  flex: 1;
+  flex: 0 0 auto;
   line-height: 1.15;
 }
 
@@ -145,11 +156,27 @@
 
   /* Image: keep aspect ratio */
   .about-img {
-    max-height: 50%;
+    max-height: 100%;
     width: auto;           /* 👈 don’t force stretching */
     height: auto;
     object-fit: contain;
     display: block;
+  }
+
+  .about-text--bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem; /* space between Clients list and Fun work list */
+}
+
+  /* each list column shares available width equally on desktop */
+  .about-text--bottom > div {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .clients-title {
+    font-size: 2.8rem;
   }
 }
 

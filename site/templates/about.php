@@ -19,27 +19,54 @@
         </div>
 
         <div class="about-text about-text--bottom">
-          <h2 class="clients-title">
-            <?= $page->clientsheadline()->or('Clients')->esc() ?>
-          </h2>
+          <div>
+            <h2 class="clients-title">
+              <?= $page->clientsheadline()->or('Clients')->esc() ?>
+            </h2>
 
-          <?php if ($page->clients()->isNotEmpty()): ?>
-            <ul class="clients-list">
-              <?php foreach ($page->clients()->toStructure() as $client): ?>
-                <li class="clients-item">
-                  <span class="clients-icon" aria-hidden="true">
-                    <img
-                      class="clients-icon-img"
-                      src="<?= url('assets/icons/star.svg') ?>"
-                      alt=""
-                    >
-                  </span>
-                  <span class="clients-name"><?= $client->name()->esc() ?></span>
-                </li>
-              <?php endforeach ?>
-            </ul>
-          <?php endif ?>
+            <?php if ($page->clients()->isNotEmpty()): ?>
+              <ul class="clients-list">
+                <?php foreach ($page->clients()->toStructure() as $client): ?>
+                  <li class="clients-item<?= random_int(0, 1) ? ' clients-item--reverse' : '' ?>">
+                    <span class="clients-icon" aria-hidden="true">
+                      <img
+                        class="clients-icon-img"
+                        src="<?= url('assets/icons/star.svg') ?>"
+                        alt=""
+                      >
+                    </span>
+                    <span class="clients-name"><?= $client->name()->esc() ?></span>
+                  </li>
+                <?php endforeach ?>
+              </ul>
+            <?php endif ?>
+          </div>
+          
+          <div>
+            <h2 class="clients-title">
+              <?= $page->funworkheadline()->or('Fun work')->esc() ?>
+            </h2>
+
+            <?php if ($page->funwork()->isNotEmpty()): ?>
+              <ul class="clients-list">
+                <?php foreach ($page->funwork()->toStructure() as $item): ?>
+                  <li class="clients-item<?= random_int(0, 1) ? ' clients-item--reverse' : '' ?>">
+                    <span class="clients-icon" aria-hidden="true">
+                      <img
+                        class="clients-icon-img"
+                        src="<?= url('assets/icons/star.svg') ?>"
+                        alt=""
+                      >
+                    </span>
+                    <span class="clients-name"><?= $item->name()->esc() ?></span>
+                  </li>
+                <?php endforeach ?>
+              </ul>
+            <?php endif ?>
+          </div>
         </div>
+
+        
       </section>
     </div>
 
