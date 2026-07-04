@@ -1,9 +1,6 @@
-body {
-    padding-bottom: var(--footer-h);
-}
-
 .project {
     width: 100%;
+    margin-bottom: 6rem;
 }
 
 .project-hero {
@@ -55,6 +52,11 @@ body {
     padding-top: var(--padding);
 }
 
+/* In-hero description: only visible on desktop */
+.project-hero__desc {
+    display: none;
+}
+
 /* one image = fullscreen */
 .project-image--one img {
   height: auto;
@@ -88,29 +90,43 @@ body {
 }
 
 @media (min-width: 60rem) {
-    .project-hero {
+  .project-hero {
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 6rem;
     gap: 6rem;
+    height: calc(100vh - var(--header-chrome) - var(--footer-chrome));
     }
 
     .project-hero__image {
         order: 1;
-        height: 50vw; 
+        height: stretch;
         width: auto;
     }
 
     .project-hero__image img {
-        height: 50vw;         /* match your other desktop image height vibe */
-        width: 100%;
-        object-fit: contain;  /* or cover, depending on your preference */
+        height: 100%;
+        width: auto;
+        object-fit: contain;
     }
 
     .project-hero__text {
         order: 2;
         flex: 1;
         padding-top: 0.2rem; /* optional little alignment tweak */
+        align-self: stretch;
+        max-width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-hero__desc {
+        display: block;
+    }
+
+    .project-desc {
+        display: none;
     }
 
     .project-images {
@@ -130,14 +146,16 @@ body {
     
     }
 
-    .project-image--two{
-        justify-content: center;
+    .project-image--two {
+        justify-content: space-between;
         gap: 1rem;
     }
 
-    .project-image--two img{
-        height: 50vw;
-        width: auto;
+    .project-image--two img {
+        flex: 1;
+        min-width: 0;
+        width: 0;
+        height: auto;
         max-width: none;
         object-fit: contain;
     }

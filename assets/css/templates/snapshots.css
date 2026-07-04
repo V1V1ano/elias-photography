@@ -1,4 +1,22 @@
 
+/* Full-viewport click zones for prev/next navigation */
+.snapshots-nav-zones {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  pointer-events: none; /* let children opt-in */
+  z-index: 10;
+}
+
+.snapshots-zone {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: all;
+}
+
 /* Whole page section: centers the stage area */
 .snapshots {
   flex: 1;

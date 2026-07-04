@@ -16,6 +16,11 @@
   $total = count($urls);
 ?>
 
+<div class="snapshots-nav-zones" aria-hidden="true">
+  <button class="snapshots-zone snapshots-zone--prev" type="button" tabindex="-1" data-zone-prev></button>
+  <button class="snapshots-zone snapshots-zone--next" type="button" tabindex="-1" data-zone-next></button>
+</div>
+
 <section class="snapshots">
   <?php if ($total === 0): ?>
     <p class="snapshots-empty">No images yet.</p>
@@ -80,6 +85,9 @@
 
     btnPrev?.addEventListener("click", prev);
     btnNext?.addEventListener("click", next);
+
+    document.querySelector("[data-zone-prev]")?.addEventListener("click", prev);
+    document.querySelector("[data-zone-next]")?.addEventListener("click", next);
 
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") prev();

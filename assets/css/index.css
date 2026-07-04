@@ -3,10 +3,6 @@
   padding: 0;
 } 
 
-html, body {
-  height: 100%;
-}
-
 :root {
   --padding: 1.5rem;
   --color-black: #010101;
@@ -33,11 +29,15 @@ html, body {
   --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
   --footer-h: 38rem; /* to avoid the footer overlapping content */
+  --header-chrome: 7rem;
+  --footer-chrome: 11rem;
 }
 
 @media (min-width: 60rem) {
   :root {
     --footer-h: 100rem; /* desktop */
+    --header-chrome: 8rem;
+    --footer-chrome: 9rem;
   }
 }
 
@@ -45,7 +45,7 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background: var(--color-background);
-}
+  line-height: 1.3;  font-size: 15px;}
 img {
   width: 100%;
 }
@@ -112,7 +112,7 @@ small {
 }
 
 .logo-inline {
-  padding-bottom: 0.2rem; 
+  padding-bottom: 0.1rem; 
   display: flex;
   flex-direction: column;
 }
@@ -130,7 +130,7 @@ small {
 }
 
 .menu a {
-  padding-bottom: 0.2rem; 
+  /* padding-bottom: 0.2rem;  */
   display: block;
 
 }
@@ -413,6 +413,10 @@ hr {
   :root {
     --padding: 3rem;
   } 
+
+  html {
+    font-size: 17px;
+  }
 
   .grid {
     grid-template-columns: repeat(12, 1fr);

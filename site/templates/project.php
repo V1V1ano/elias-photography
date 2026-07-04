@@ -6,19 +6,28 @@
 
   <section class="project-hero">
     <div class="project-hero__text">
-      <h1 class="project-title"><?= $page->title()->esc() ?></h1>
+      <div class="project-hero__top">
+        <h1 class="project-title"><?= $page->title()->esc() ?></h1>
 
-      <div class="project-metadata">
-        <span class="project-metadata-row1">
-          <p><?= $page->type()->esc() ?></p>
-          <p><?= $page->occasion()->esc() ?></p>
-        </span>
-        <span class="project-metadata-row1">
-          <p><?= $page->year()->esc() ?></p>
-          <p><?= $page->city()->esc() ?></p>
-          <p><?= $page->place()->esc() ?></p>
-        </span>
+        <div class="project-metadata">
+          <span class="project-metadata-row1">
+            <p><?= $page->type()->esc() ?></p>
+            <p><?= $page->occasion()->esc() ?></p>
+          </span>
+          <span class="project-metadata-row1">
+            <p><?= $page->year()->esc() ?></p>
+            <p><?= $page->city()->esc() ?></p>
+            <p><?= $page->place()->esc() ?></p>
+          </span>
+        </div>
       </div>
+
+      <?php if ($page->description()->isNotEmpty()): ?>
+        <div class="project-hero__desc text">
+          <p>what about/</p>
+          <?= $page->description()->kt() ?>
+        </div>
+      <?php endif; ?>
     </div>
 
     <?php if ($titleImage): ?>
@@ -82,7 +91,7 @@
   <?php endif; ?>
 
   <?php if ($page->description()->isNotEmpty()): ?>
-    <div class="project-desc">
+    <div class="project-desc text">
       <p>what about/</p>
       <?= $page->description()->kt() ?>
     </div>
