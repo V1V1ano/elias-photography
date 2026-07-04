@@ -51,6 +51,113 @@
   }
 }
 
+/* Projects list ------------------------------------------------ */
+
+.home-project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* enable full-page scroll snapping only when the home projects list exists */
+html:has(.home-project-list) {
+  scroll-snap-type: y mandatory;
+}
+
+html:has(.home-project-list) .home-hero,
+html:has(.home-project-list) .home-project-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.home-project-item {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-project-link {
+  display: block;
+  color: var(--color-black);
+  text-decoration: none;
+  max-width: 60rem;
+  max-height: 100%;
+}
+
+.home-project-figure {
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  line-height: 0;
+}
+
+.home-project-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .4s ease;
+}
+
+@media (min-width: 60rem) {
+  /* cap image height to the space between header and footer,
+     keep aspect ratio, keep scroll-snap behavior */
+  .home-project-figure {
+    height: calc(100vh - var(--header-chrome) - var(--footer-chrome));
+    height: calc(100svh - var(--header-chrome) - var(--footer-chrome));
+  }
+
+  .home-project-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.home-project-caption {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--color-white);
+  line-height: 1.2;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.home-project-name,
+.home-project-year {
+  font-family: var(--font-family-sans);
+  font-weight: normal;
+}
+
+.home-project-link:hover .home-project-img {
+  transform: scale(1.02);
+}
+
+.home-project-title {
+  display: block;
+  margin-top: .75rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 75rem) {
+  .home-project-title {
+    font-size: 1.25rem;
+  }
+}
+
 /* ------------------------------------------------------------- */
 
 .home-grid {

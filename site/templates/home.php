@@ -53,9 +53,27 @@ $projects = page('projects')->children()->listed();
 
 <ul class="home-project-list">
   <?php foreach ($projects as $project): ?>
-    <li>
-      <a href="<?= $project->url() ?>">
-        <?= $project->title()->esc() ?>
+    <?php $img = $project->titleImage()->toFile(); ?>
+    <li class="home-project-item">
+      <a class="home-project-link" href="<?= $project->url() ?>">
+        <?php if ($img): ?>
+          <figure class="home-project-figure">
+            <img
+              class="home-project-img"
+              src="<?= $img->resize(1200)->url() ?>"
+              alt="<?= $img->alt()->or($project->title())->esc() ?>"
+              loading="lazy"
+            >
+            <figcaption class="home-project-caption">
+              <span class="home-project-name"><?= $project->title()->esc() ?></span>
+              <?php if ($project->year()->isNotEmpty()): ?>
+                <span class="home-project-year"><?= $project->year()->esc() ?></span>
+              <?php endif ?>
+            </figcaption>
+          </figure>
+        <?php else: ?>
+          <span class="home-project-title"><?= $project->title()->esc() ?></span>
+        <?php endif ?>
       </a>
     </li>
   <?php endforeach ?>
