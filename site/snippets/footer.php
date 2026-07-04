@@ -17,6 +17,13 @@
         <a class="logo-inline" href="mailto:elias.bernhardt@outlook.com">mail: contact@eliasbernhardt.com</a>
       </div>
 
+      <?php if ($page->template()->name() === 'home'): ?>
+        <div class="logo footer-hint">
+          <span class="logo-inline"> scroll </span>
+          <span class="logo-inline"> for more projects </span>
+        </div>
+      <?php endif ?>
+
 
       <!-- need to add pages imprint and data privacy -->
       <div class="logo">

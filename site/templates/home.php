@@ -55,6 +55,12 @@ $projects = page('projects')->children()->listed();
   <?php foreach ($projects as $project): ?>
     <?php $img = $project->titleImage()->toFile(); ?>
     <li class="home-project-item">
+      <span class="home-project-arrow home-project-arrow--left" aria-hidden="true">
+        <img src="<?= url('assets/icons/arrow_right.svg') ?>" alt="">
+      </span>
+      <span class="home-project-arrow home-project-arrow--right" aria-hidden="true">
+        <img src="<?= url('assets/icons/arrow_left.svg') ?>" alt="">
+      </span>
       <a class="home-project-link" href="<?= $project->url() ?>">
         <?php if ($img): ?>
           <figure class="home-project-figure">

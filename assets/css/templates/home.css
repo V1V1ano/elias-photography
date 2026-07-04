@@ -82,6 +82,53 @@ html:has(.home-project-list) .home-project-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+/* decorative side arrows — desktop only */
+.home-project-arrow {
+  display: none;
+}
+
+@media (min-width: 60rem) {
+  .home-project-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .home-project-arrow--left {
+    left: 0;
+  }
+
+  .home-project-arrow--right {
+    right: 0;
+  }
+
+  .home-project-arrow img {
+    display: block;
+    width: 1.5rem;
+    height: auto;
+  }
+}
+
+/* footer hint (home page only, desktop only) */
+.footer-hint {
+  display: none;
+}
+
+@media (min-width: 60rem) {
+  .footer-hint {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    text-align: center;
+  }
 }
 
 .home-project-link {
@@ -103,7 +150,7 @@ html:has(.home-project-list) .home-project-item {
   max-width: 100%;
   height: auto;
   display: block;
-  transition: transform .4s ease;
+  transition: filter .3s ease;
 }
 
 @media (min-width: 60rem) {
@@ -143,7 +190,7 @@ html:has(.home-project-list) .home-project-item {
 }
 
 .home-project-link:hover .home-project-img {
-  transform: scale(1.02);
+  filter: grayscale(1);
 }
 
 .home-project-title {
