@@ -34,3 +34,5 @@ columns:
           - home
           - default
           - snapshots
+          - imprint
+          - privacy

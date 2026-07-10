@@ -1,0 +1,200 @@
+title: Imprint
+icon: file-document
+
+# The imprint is not part of the main navigation.
+# It is unlisted and linked from the footer only.
+status:
+  unlisted:
+    label: Public
+    text: The imprint is reachable from the footer.
+  listed: false
+  draft:
+    label: Draft
+    text: Only visible in the Panel.
+
+options:
+  changeStatus: true
+  changeSlug: false
+  changeTemplate: false
+  delete: false
+
+columns:
+  - width: 2/3
+    sections:
+      intro:
+        type: fields
+        fields:
+          headline:
+            label: Page headline
+            type: text
+            required: true
+            placeholder: Imprint
+            help: Main heading shown on the imprint page.
+
+      section1:
+        type: fields
+        label: 1. Section
+        fields:
+          section1_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Angaben gemäß § 5 TMG
+          section1_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section2:
+        type: fields
+        label: 2. Section
+        fields:
+          section2_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Kontakt
+          section2_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section3:
+        type: fields
+        label: 3. Section
+        fields:
+          section3_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Umsatzsteuer
+          section3_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section4:
+        type: fields
+        label: 4. Section
+        fields:
+          section4_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+          section4_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section5:
+        type: fields
+        label: 5. Section
+        fields:
+          section5_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: EU-Streitschlichtung
+          section5_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section6:
+        type: fields
+        label: 6. Section
+        fields:
+          section6_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Haftung für Inhalte
+          section6_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section7:
+        type: fields
+        label: 7. Section
+        fields:
+          section7_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Haftung für Links
+          section7_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section8:
+        type: fields
+        label: 8. Section
+        fields:
+          section8_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Urheberrecht
+          section8_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol

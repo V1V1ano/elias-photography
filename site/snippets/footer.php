@@ -27,8 +27,16 @@
 
       <!-- need to add pages imprint and data privacy -->
       <div class="logo">
-        <span class="logo-inline"> imprint </span>
-        <span class="logo-inline"> data privacy</span>
+        <?php if ($imprint = page('imprint')): ?>
+          <a class="logo-inline" href="<?= $imprint->url() ?>"> imprint </a>
+        <?php else: ?>
+          <span class="logo-inline"> imprint </span>
+        <?php endif ?>
+        <?php if ($privacy = page('privacy')): ?>
+          <a class="logo-inline" href="<?= $privacy->url() ?>"> data privacy</a>
+        <?php else: ?>
+          <span class="logo-inline"> data privacy</span>
+        <?php endif ?>
       </div>
       
   </footer>

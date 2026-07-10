@@ -1,0 +1,7 @@
+/*
+  Data Privacy page styles.
+  The privacy page shares its layout and typography with the imprint page,
+  so we simply re-use the imprint stylesheet here.
+*/
+
+@import url("imprint.css");

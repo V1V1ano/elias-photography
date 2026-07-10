@@ -1,0 +1,50 @@
+/*
+  Imprint page styles.
+  Auto-loaded via `@auto` in the header snippet for the `imprint` template.
+*/
+
+.imprint {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Main headline "Imprint" — same look as .about-title on the about page */
+.imprint-header .h1 {
+  margin: 0;
+  font-family: var(--font-family-highlight);
+  font-size: 3.6rem;
+  line-height: 1;
+  color: var(--color-blue);
+  font-weight: normal;
+}
+
+.imprint-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Section subheadlines — same look as .clients-title but in black */
+.imprint-subheadline {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-family: var(--font-family-highlight);
+  color: var(--color-black);
+  font-weight: normal;
+}
+
+.imprint-text {
+  margin: 0;
+  max-width: 1000px;
+}
+
+@media (min-width: 60rem) {
+  .imprint-subheadline {
+    font-size: 2rem;
+  }
+}
