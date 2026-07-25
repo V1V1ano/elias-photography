@@ -6,8 +6,8 @@
   </header>
 
   <?php
-    // Render up to 8 headline/text pairs. Empty sections are skipped.
-    for ($i = 1; $i <= 8; $i++):
+    // Render up to 9 headline/text pairs. Empty sections are skipped.
+    for ($i = 1; $i <= 9; $i++):
       $headline = $page->{'section' . $i . '_headline'}();
       $text     = $page->{'section' . $i . '_text'}();
 

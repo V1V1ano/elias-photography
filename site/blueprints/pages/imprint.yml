@@ -60,7 +60,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Kontakt
+            placeholder: Angaben gemäß § 5 TMG
           section2_text:
             label: Content
             type: textarea
@@ -81,7 +81,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Umsatzsteuer
+            placeholder: Kontakt
           section3_text:
             label: Content
             type: textarea
@@ -102,7 +102,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+            placeholder: Umsatzsteuer
           section4_text:
             label: Content
             type: textarea
@@ -123,7 +123,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: EU-Streitschlichtung
+            placeholder: Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
           section5_text:
             label: Content
             type: textarea
@@ -144,7 +144,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Haftung für Inhalte
+            placeholder: EU-Streitschlichtung
           section6_text:
             label: Content
             type: textarea
@@ -165,7 +165,7 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Haftung für Links
+            placeholder: Haftung für Inhalte
           section7_text:
             label: Content
             type: textarea
@@ -186,8 +186,29 @@ columns:
             label: Headline
             type: text
             required: true
-            placeholder: Urheberrecht
+            placeholder: Haftung für Links
           section8_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section9:
+        type: fields
+        label: 9. Section
+        fields:
+          section9_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Urheberrecht
+          section9_text:
             label: Content
             type: textarea
             size: medium

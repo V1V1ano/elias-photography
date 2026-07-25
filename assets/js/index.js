@@ -83,4 +83,27 @@ Array.from(document.querySelectorAll("[data-lightbox]")).forEach(element => {
   window.addEventListener("resize", update);
 })();
 
+// Home page: hide the "scroll for more projects" footer hint
+// once the last project in the list is (partly) visible in the viewport.
+(() => {
+  const hint = document.querySelector(".footer-hint");
+  if (!hint) return;
+
+  const projects = document.querySelectorAll(".home-project-item");
+  if (projects.length === 0) return;
+
+  const last = projects[projects.length - 1];
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          hint.classList.toggle("is-hidden", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.01 }
+    );
+    observer.observe(last);
+  }
+})();
 

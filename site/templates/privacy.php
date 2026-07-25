@@ -7,7 +7,7 @@
 
   <?php
     // Render up to 9 headline/text pairs. Empty sections are skipped.
-    for ($i = 1; $i <= 9; $i++):
+    for ($i = 1; $i <= 11; $i++):
       $headline = $page->{'section' . $i . '_headline'}();
       $text     = $page->{'section' . $i . '_text'}();
 

@@ -128,6 +128,11 @@ html:has(.home-project-list) .home-project-item {
     transform: translate(-50%, -50%);
     pointer-events: none;
     text-align: center;
+    transition: opacity 200ms ease;
+  }
+
+  .footer-hint.is-hidden {
+    opacity: 0;
   }
 }
 

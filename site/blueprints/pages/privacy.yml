@@ -219,3 +219,46 @@ columns:
               - email
               - ul
               - ol
+
+      section10:
+        type: fields
+        label: 10. Section
+        fields:
+          section10_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Neue Section
+          section10_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+
+      section11:
+        type: fields
+        label: 11. Section
+        fields:
+          section11_headline:
+            label: Headline
+            type: text
+            required: true
+            placeholder: Neue Section
+          section11_text:
+            label: Content
+            type: textarea
+            size: medium
+            buttons:
+              - bold
+              - italic
+              - link
+              - email
+              - ul
+              - ol
+      

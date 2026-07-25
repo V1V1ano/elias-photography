@@ -129,6 +129,16 @@ body.hero-footer-dark .footer .logo-inline {
   color: var(--color-blue);
 }
 
+/* active footer links (imprint, data privacy) use the same accent as header nav */
+.footer .logo-inline[aria-current],
+.footer .logo-inline.is-current {
+  color: var(--color-blue);
+}
+body.hero-footer-dark .footer .logo-inline[aria-current],
+body.hero-footer-dark .footer .logo-inline.is-current {
+  color: var(--color-blue);
+}
+
 
 .logo {
   display: flex;

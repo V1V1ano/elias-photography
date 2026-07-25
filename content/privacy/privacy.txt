@@ -6,105 +6,92 @@ Headline: Data Privacy
 
 ----
 
-Section1_headline: Verantwortlicher
+Section1-headline: Verantwortlicher
 
 ----
 
-Section1_text:
-
-Elias Bernhardt
-Musterstraße 1
-12345 Musterstadt
-
-E-Mail: (link: mailto:contact@eliasbernhardt.com text: contact@eliasbernhardt.com)
+Section1-text: Hier Texte einfügen
 
 ----
 
-Section2_headline: Ihre Rechte als betroffene Person
+Section2-headline: Ihre Rechte als betroffene Person
 
 ----
 
-Section2_text:
-
-Sie können unter den angegebenen Kontaktdaten des Verantwortlichen jederzeit folgende Rechte ausüben:
-
-- Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),
-- Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),
-- Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),
-- Einschränkung der Datenverarbeitung (Art. 18 DSGVO),
-- Widerspruch gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO),
-- Datenübertragbarkeit (Art. 20 DSGVO).
-
-Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+Section2-text: Hier Texte einfügen
 
 ----
 
-Section3_headline: Erfassung allgemeiner Informationen beim Besuch der Website
+Section3-headline: Erfassung allgemeiner Informationen beim Besuch der Website
 
 ----
 
-Section3_text:
-
-Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und Ähnliches.
-
-Sie werden ausschließlich zur Verbesserung unseres Angebots verarbeitet und erlauben keinen Rückschluss auf Ihre Person.
+Section3-text: Hier Texte einfügen
 
 ----
 
-Section4_headline: Hosting
+Section4-headline: Hosting
 
 ----
 
-Section4_text:
-
-Die Inhalte unserer Website werden bei einem Hoster gehostet. Bei jedem Aufruf werden automatisch Informationen erfasst und in Server-Logfiles gespeichert. Diese sind für die Auslieferung der Website technisch notwendig.
+Section4-text: Hier Texte einfügen
 
 ----
 
-Section5_headline: Kontaktaufnahme per E-Mail oder Telefon
+Section5-headline: Kontaktaufnahme per E-Mail oder Telefon
 
 ----
 
-Section5_text:
-
-Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage sowie für den Fall gespeichert, dass Anschlussfragen entstehen. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+Section5-text: Hier Texte einfügen
 
 ----
 
-Section6_headline: Cookies
+Section6-headline: Veröffentlichung von Portfolio- und Referenzfotos
 
 ----
 
-Section6_text:
-
-Unsere Website verwendet Cookies. Das sind kleine Textdateien, die es möglich machen, auf dem Endgerät des Nutzers spezifische, auf den Nutzer bezogene Informationen zu speichern. Sie dienen der Nutzerfreundlichkeit und Sicherheit von Websites. Sie können das Setzen von Cookies durch Einstellungen Ihres Browsers deaktivieren.
+Section6-text: Hier Texte einfügen
 
 ----
 
-Section7_headline: SSL- bzw. TSL-Verschlüsselung
+Section7-headline: Verlinkung zu Social Media Profilen
 
 ----
 
-Section7_text:
-
-Zum Schutz Ihrer Daten bei der Übertragung nutzen wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL / TLS) über HTTPS.
+Section7-text: Hier Texte einfügen
 
 ----
 
-Section8_headline: Speicherdauer
+Section8-headline: Cookies, Tracking und Analysetools
 
 ----
 
-Section8_text:
-
-Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Verarbeitungszwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen dies vorschreiben. Nach Wegfall des Zwecks bzw. Ablauf der Fristen werden die Daten gelöscht.
+Section8-text: Hier Texte einfügen
 
 ----
 
-Section9_headline: Änderung dieser Datenschutzerklärung
+Section9-headline: SSL- bzw. TLS-Verschlüsselung
 
 ----
 
-Section9_text:
+Section9-text: Hier Texte einfügen
 
-Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+----
+
+Section10-headline: Speicherdauer
+
+----
+
+Section10-text: Hier Texte einfügen
+
+----
+
+Section11-headline: Änderung dieser Datenschutzerklärung
+
+----
+
+Section11-text: Hier Texte einfügen
+
+----
+
+Uuid: tb6zwuvf1esqd1tw

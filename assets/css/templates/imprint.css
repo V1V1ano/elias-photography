@@ -31,9 +31,9 @@
 /* Section subheadlines — same look as .clients-title but in black */
 .imprint-subheadline {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.1;
-  font-family: var(--font-family-highlight);
+  font-family: var(--font-family-sans);
   color: var(--color-black);
   font-weight: normal;
 }
@@ -45,6 +45,6 @@
 
 @media (min-width: 60rem) {
   .imprint-subheadline {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
