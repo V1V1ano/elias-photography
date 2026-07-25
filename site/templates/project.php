@@ -35,7 +35,10 @@
         <img
           src="<?= $titleImage->url() ?>"
           alt="<?= $titleImage->alt()->or($page->title())->esc() ?>"
+          width="<?= $titleImage->width() ?>"
+          height="<?= $titleImage->height() ?>"
           loading="eager"
+          decoding="async"
         >
       </figure>
     <?php endif; ?>
