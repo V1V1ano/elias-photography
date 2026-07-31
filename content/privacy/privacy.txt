@@ -1,0 +1,97 @@
+Title: Data Privacy
+
+----
+
+Headline: Data Privacy
+
+----
+
+Section1-headline: Verantwortlicher
+
+----
+
+Section1-text: Hier Texte einfügen
+
+----
+
+Section2-headline: Ihre Rechte als betroffene Person
+
+----
+
+Section2-text: Hier Texte einfügen
+
+----
+
+Section3-headline: Erfassung allgemeiner Informationen beim Besuch der Website
+
+----
+
+Section3-text: Hier Texte einfügen
+
+----
+
+Section4-headline: Hosting
+
+----
+
+Section4-text: Hier Texte einfügen
+
+----
+
+Section5-headline: Kontaktaufnahme per E-Mail oder Telefon
+
+----
+
+Section5-text: Hier Texte einfügen
+
+----
+
+Section6-headline: Veröffentlichung von Portfolio- und Referenzfotos
+
+----
+
+Section6-text: Hier Texte einfügen
+
+----
+
+Section7-headline: Verlinkung zu Social Media Profilen
+
+----
+
+Section7-text: Hier Texte einfügen
+
+----
+
+Section8-headline: Cookies, Tracking und Analysetools
+
+----
+
+Section8-text: Hier Texte einfügen
+
+----
+
+Section9-headline: SSL- bzw. TLS-Verschlüsselung
+
+----
+
+Section9-text: Hier Texte einfügen
+
+----
+
+Section10-headline: Speicherdauer
+
+----
+
+Section10-text: Hier Texte einfügen
+
+----
+
+Section11-headline: Änderung dieser Datenschutzerklärung
+
+----
+
+Section11-text: Hier Texte einfügen
+
+----
+
+Uuid: tb6zwuvf1esqd1tw
