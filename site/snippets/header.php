@@ -41,15 +41,26 @@
     More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers
   */
   ?>
+  <?php
+  /*
+    Cache-busting: append ?v=<file mtime> to each asset URL so browsers
+    fetch a fresh copy whenever a file changes, while still allowing
+    long-term caching between deploys.
+  */
+  $bust = function (string $file): string {
+    $path = kirby()->root('index') . '/' . $file;
+    return is_file($path) ? $file . '?v=' . filemtime($path) : $file;
+  };
+  ?>
   <?= css([
-    'assets/css/prism.css',
-    'assets/css/lightbox.css',
-    'assets/css/index.css',
+    $bust('assets/css/prism.css'),
+    $bust('assets/css/lightbox.css'),
+    $bust('assets/css/index.css'),
     '@auto'
   ]) ?>
 
   <?= js([
-    'assets/js/index.js'
+    $bust('assets/js/index.js')
   ], ['defer' => true]) ?>
 
   <?php
