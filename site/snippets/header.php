@@ -97,7 +97,17 @@
         */
         ?>
         <?php foreach ($site->children()->listed() as $item): ?>
-        <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
+          <?php if ($item->isHomePage()): ?>
+            <a
+              <?php e($item->isOpen(), 'aria-current="page"') ?>
+              href="<?= $item->url() ?>#projects"
+            >projects</a>
+          <?php else: ?>
+            <a
+              <?php e($item->isOpen(), 'aria-current="page"') ?>
+              href="<?= $item->url() ?>"
+            ><?= $item->title()->esc() ?></a>
+          <?php endif ?>
         <?php endforeach ?>
         
       </nav>

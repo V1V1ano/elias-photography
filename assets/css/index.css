@@ -45,7 +45,14 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background: var(--color-background);
-  line-height: 1.3;  font-size: 15px;}
+  line-height: 1.3;  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+/* offset anchor jumps so the sticky header doesn't cover the target */
+#projects {
+  scroll-margin-top: var(--header-chrome);
+}
 img {
   width: 100%;
 }
@@ -411,11 +418,20 @@ hr {
   background-color: transparent;
 }
 
-/* Solid white header + footer on every page except the home page.
-   Home keeps them transparent so the hero image shows through. */
-body:not(.template-home) .header,
-body:not(.template-home) .footer {
+/* Solid white header + footer on every page except the home and project pages.
+   Those keep them transparent so the hero image shows through. */
+body:not(.template-home):not(.template-project) .header,
+body:not(.template-home):not(.template-project) .footer {
   background-color: var(--color-white);
+}
+
+/* On mobile, project pages also get a white header/footer
+   (transparent only on desktop where there's more room around the hero). */
+@media (max-width: 59.99rem) {
+  body.template-project .header,
+  body.template-project .footer {
+    background-color: var(--color-white);
+  }
 }
 .map {
   --w: 2;

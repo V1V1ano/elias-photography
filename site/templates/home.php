@@ -51,7 +51,7 @@ $projects = page('projects')->children()->listed();
   </section>
 <?php endif ?>
 
-<ul class="home-project-list">
+<ul id="projects" class="home-project-list">
   <?php foreach ($projects as $project): ?>
     <?php $img = $project->titleImage()->toFile(); ?>
     <li class="home-project-item">
