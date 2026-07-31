@@ -156,9 +156,10 @@ body.hero-footer-dark .footer .logo-inline.is-current {
 }
 
 .logo-inline {
-  padding-bottom: 0.1rem; 
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 0.1rem;
+  display: block; /* was `display: flex; flex-direction: column`,
+                     which triggered a Safari bug where `white-space: nowrap`
+                     is ignored on the anonymous text flex item. */
 }
 
 .nav-group {
