@@ -13,7 +13,7 @@
 
   <footer class="footer">
       <div class="logo">
-        <span class="logo-inline"> call: +49 17672270664 </span>
+        <span class="logo-inline">call:&nbsp;+49&nbsp;17672270664</span>
         <a class="logo-inline" href="mailto:hello@eliasbernhardt.com">mail: hello@eliasbernhardt.com</a>
       </div>
 
