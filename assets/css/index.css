@@ -410,6 +410,13 @@ hr {
   justify-content: space-between;
   background-color: transparent;
 }
+
+/* Solid white header + footer on every page except the home page.
+   Home keeps them transparent so the hero image shows through. */
+body:not(.template-home) .header,
+body:not(.template-home) .footer {
+  background-color: var(--color-white);
+}
 .map {
   --w: 2;
   --h: 1;

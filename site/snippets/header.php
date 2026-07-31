@@ -62,7 +62,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
 
-<body>
+<body class="template-<?= $page->intendedTemplate()->name() ?>">
 
   <header class="header">
     <?php
