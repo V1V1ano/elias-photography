@@ -49,3 +49,23 @@ Icon
 
 /site/config/.license
 /site/config/config.starterkit.test.php
+
+# Kirby content edited through the live Panel
+/content/*
+!/content/index.html
+
+# Panel accounts
+/site/accounts/*
+!/site/accounts/index.html
+
+# Generated/runtime files
+/media/*
+!/media/index.html
+
+/site/cache/*
+!/site/cache/index.html
+
+/site/sessions/*
+!/site/sessions/index.html
+
+/site/logs/*
