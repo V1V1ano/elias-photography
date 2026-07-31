@@ -3,6 +3,8 @@
   width: 100%;
   flex: 1;       /* important because .main is flex */
   min-width: 0;  /* prevents flex overflow weirdness */
+  /* clear the fixed footer on mobile so the final image isn't hidden */
+  padding-bottom: var(--footer-chrome);
 }
 
 /* MOBILE (stacked) */
@@ -115,6 +117,11 @@
 
 /* DESKTOP (two columns, image right) */
 @media (min-width: 60rem) {
+  .about {
+    /* desktop layout is height-capped, no extra clearance needed */
+    padding-bottom: 0;
+  }
+
   .about-layout {
     flex-direction: row;
     align-items: stretch;

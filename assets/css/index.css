@@ -423,6 +423,8 @@ hr {
 body:not(.template-home):not(.template-project) .header,
 body:not(.template-home):not(.template-project) .footer {
   background-color: var(--color-white);
+  /* opacity: 0.7;
+  backdrop-filter: blur(10px); */
 }
 
 /* On mobile, project pages also get a white header/footer

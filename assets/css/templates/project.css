@@ -157,6 +157,9 @@
     .project-image--two {
         justify-content: space-between;
         gap: 1rem;
+        box-sizing: border-box; /* keep 100% width, let padding eat into it */
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 
     .project-image--two img {
