@@ -1,51 +1,34 @@
 # System files
-# ------------
-
 Icon
 .DS_Store
 
-# Temporary files
-# ---------------
-
-/media/*
-!/media/index.html
+# Editors
+*.sublime-workspace
+/.vscode/
+/.idea/
 
 # Lock files
-# ---------------
-
 .lock
 
-# Editors
-# (sensitive workspace files)
-# ---------------------------
-*.sublime-workspace
-/.vscode
-/.idea
-
-# -------------SECURITY-------------
-# NEVER publish these files via Git!
-# -------------SECURITY-------------
-
-# Cache Files
-# ---------------
-
-/site/cache/*
-!/site/cache/index.html
-
-# Accounts
-# ---------------
+# Kirby live data
+/content/*
+!/content/index.html
 
 /site/accounts/*
 !/site/accounts/index.html
 
-# Sessions
-# ---------------
+# Kirby generated/runtime data
+/media/*
+!/media/index.html
+
+/site/cache/*
+!/site/cache/index.html
 
 /site/sessions/*
 !/site/sessions/index.html
 
-# License
-# ---------------
+/site/logs/*
 
+# Kirby license
 /site/config/.license
 /site/config/config.starterkit.test.php
