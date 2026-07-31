@@ -48,7 +48,13 @@
 /* This box defines where the image lives */
 .snapshots-stage {
   width: 100%;
-  height: 60vh;               /* fixed image area height */
+  /* Fit inside the visible area between header and footer, even on Safari
+     mobile where the URL bar keeps `vh` bigger than the actual visible
+     viewport. `svh` uses the small viewport (URL bar visible), so the
+     block never overflows. The 4.5rem subtracts the counter + its margin.
+     Fallback `60vh` is kept for older browsers without svh support. */
+  height: 60vh;
+  height: calc(100svh - var(--header-chrome) - var(--footer-chrome) - 4.5rem);
   max-width: 90vw;            /* image area width constraint */
   display: flex;
   align-items: center;        /* vertical center */
