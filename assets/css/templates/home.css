@@ -79,6 +79,13 @@ html:has(.home-project-list) .home-project-item {
   text-align: center;
   height: 100vh;
   height: 100svh;
+  /* Reserve space for the sticky header and fixed footer so that
+     the image is flex-centered in the *visible* area, not the whole
+     viewport. Safari mobile shows the URL bar longer than Chrome,
+     which made the offset visible. */
+  padding-top: var(--header-chrome);
+  padding-bottom: var(--footer-chrome);
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,10 +156,12 @@ html:has(.home-project-list) .home-project-item {
   margin: 0;
   display: inline-block;
   line-height: 0;
+  max-height: 100%;
 }
 
 .home-project-img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
   display: block;
   transition: filter .3s ease;
