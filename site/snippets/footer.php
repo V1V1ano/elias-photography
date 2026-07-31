@@ -14,7 +14,7 @@
   <footer class="footer">
       <div class="logo">
         <span class="logo-inline">call:&nbsp;+49&nbsp;17672270664</span>
-        <a class="logo-inline" href="mailto:hallo@eliasbernhardt.de">mail: hund@eliasbernhardt.de</a>
+        <a class="logo-inline" href="mailto:hallo@eliasbernhardt.de">mail: hallo@eliasbernhardt.de</a>
       </div>
 
       <?php if ($page->template()->name() === 'home'): ?>
