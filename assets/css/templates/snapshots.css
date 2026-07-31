@@ -1,4 +1,24 @@
 
+/* -----------------------------------------------------------
+   Snapshots page: lock the viewport, no scrolling.
+   - height: 100svh caps body to the *small* viewport so Safari's
+     URL bar can't push content into a scrollable area.
+   - overflow: hidden on html+body is a belt-and-braces guarantee.
+   - .main padding-bottom is raised to var(--footer-chrome) so that
+     the content area matches the visible strip between the sticky
+     header and the fixed footer -> flex-centering lands in the true
+     visible center.
+   -------------------------------------------------------- */
+html:has(body.template-snapshots),
+body.template-snapshots {
+  height: 100svh;
+  overflow: hidden;
+}
+
+body.template-snapshots .main {
+  padding-bottom: var(--footer-chrome);
+}
+
 /* Full-viewport click zones for prev/next navigation */
 .snapshots-nav-zones {
   position: fixed;
