@@ -112,6 +112,7 @@ small {
 .header .menu a,
 .footer .logo-inline {
   color: var(--color-black);
+  white-space: nowrap;
 }
 
 body.hero-header-dark .header .logo-inline,
