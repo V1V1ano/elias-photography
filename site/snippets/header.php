@@ -107,7 +107,18 @@
           <?php snippet('social') ?> 
         */
         ?>
-        <?php foreach ($site->children()->listed() as $item): ?>
+        <?php
+        /*
+          Hard-coded nav order (projects -> snapshots -> about) so the
+          header stays stable regardless of how the pages are sorted
+          in the Panel / content folder prefixes. Missing pages are
+          skipped silently.
+        */
+        $navSlugs = ['home', 'snapshots', 'about'];
+        ?>
+        <?php foreach ($navSlugs as $slug): ?>
+          <?php $item = page($slug); ?>
+          <?php if (!$item) continue; ?>
           <?php if ($item->isHomePage()): ?>
             <a
               <?php e($item->isOpen(), 'aria-current="page"') ?>
