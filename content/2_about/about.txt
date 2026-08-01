@@ -1,0 +1,53 @@
+Title: about
+
+----
+
+Name: Elias Bernhardt
+
+----
+
+Textupper:
+
+I´ve been fascinated by photography since I got my first camera at the age of 14. I quickly realised that the ability to tell a story through a lens gives me the greatest sense of fulfilment. My images focus on a mix of raw emotions, documentary and fashion.
+
+Films, artificial light and music are my inspiration and reflect my style. Also, I can't listen to music without constantly seeing images in my mind's eye.
+
+----
+
+Clientsheadline: Clients
+
+----
+
+Clients:
+
+-
+  name: dahledohr
+-
+  name: 'Chaze Sharp'
+-
+  name: 'Vivien Serve'
+-
+  name: 'Jonathan Duhr'
+-
+  name: 'Katharina Fedde'
+
+----
+
+Funworkheadline: Passion
+
+----
+
+Funwork:
+
+-
+  name: Mallorza
+-
+  name: 'I <3 Vivi'
+
+----
+
+Textlower: <p>Lower text…</p>
+
+----
+
+Uuid: fiwwne5rnyzeybp1
