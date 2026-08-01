@@ -13,14 +13,13 @@
 
   <footer class="footer">
       <div class="logo">
-        <span class="logo-inline">call:&nbsp;+49&nbsp;17672270664</span>
+        <span class="logo-inline">berlin, book a call</span>
         <a class="logo-inline" href="mailto:hallo@eliasbernhardt.de">mail: hallo@eliasbernhardt.de</a>
       </div>
 
       <?php if ($page->template()->name() === 'home'): ?>
         <div class="logo footer-hint">
-          <span class="logo-inline"> scroll </span>
-          <span class="logo-inline"> for more projects </span>
+          <span class="logo-inline"> scroll for projects </span>
         </div>
       <?php endif ?>
 

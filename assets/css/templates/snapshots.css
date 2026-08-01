@@ -16,7 +16,7 @@ body.template-snapshots {
 }
 
 body.template-snapshots .main {
-  padding-bottom: var(--footer-chrome);
+  /* padding-bottom: var(--footer-chrome); */
 }
 
 /* Full-viewport click zones for prev/next navigation */

@@ -11,10 +11,12 @@
   z-index: -1; /* sit behind header/footer so blend modes reach it */
   width: auto;
   height: 100vh;
-  height: 100svh; /* nicer on mobile browsers with dynamic chrome */
+  height: 100lvh; /* always the *largest* viewport (URL bar hidden) so the
+                     image never falls short when mobile chrome animates.
+                     Excess is clipped by overflow: hidden + object-fit: cover. */
   margin-left: calc(var(--padding) * -1);
   margin-right: calc(var(--padding) * -1);
-  margin-top: calc(var(--header-chrome) * -1);
+  /* margin-top: calc(var(--header-chrome) * -1); */
   overflow: hidden;
 }
 
@@ -78,13 +80,13 @@ html:has(.home-project-list) .home-project-item {
   width: 100%;
   text-align: center;
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   /* Reserve space for the sticky header and fixed footer so that
      the image is flex-centered in the *visible* area, not the whole
      viewport. Safari mobile shows the URL bar longer than Chrome,
      which made the offset visible. */
-  padding-top: var(--header-chrome);
-  padding-bottom: var(--footer-chrome);
+  /* padding-top: var(--header-chrome);
+  padding-bottom: var(--footer-chrome); */
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -161,7 +163,15 @@ html:has(.home-project-list) .home-project-item {
 
 .home-project-img {
   max-width: 100%;
-  max-height: 100%;
+  /* Cap the image height to the visible viewport minus the sticky
+     header and fixed footer. Setting this directly on the img
+     bypasses the percentage `max-height` chain that breaks on mobile
+     (because `.home-project-link`/`figure` have no definite height),
+     so the image now shrinks in step with the container when the
+     mobile URL/tab bar animates open. `svh` is the fallback for
+     browsers without `dvh`. */
+  max-height: calc(100svh - var(--header-chrome) - var(--footer-chrome));
+  max-height: calc(100dvh - var(--header-chrome) - var(--footer-chrome));
   height: auto;
   display: block;
   transition: filter .3s ease;

@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 6rem
 }
 
 /* Main headline "Imprint" — same look as .about-title on the about page */
