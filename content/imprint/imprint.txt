@@ -1,0 +1,88 @@
+Title: Imprint
+
+----
+
+Headline: Imprint
+
+----
+
+Section1-headline: Angaben gemäß § 5 DDG
+
+----
+
+Section1-text: Elias Bernhardt
+
+----
+
+Section2-headline: Kontakt
+
+----
+
+Section2-text:
+
+Telefon: +49 176 72270664
+E-Mail: contact@eliasbernhardt.com
+
+----
+
+Section3-headline: Umsetzung
+
+----
+
+Section3-text:
+
+Website Content Elias Bernhardt
+Website Design Vivien Serve
+Website built with Kirby
+
+----
+
+Section4-headline: Steuerliche Angaben
+
+----
+
+Section4-text: Dies ist ein Test
+
+----
+
+Section5-headline: Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+
+----
+
+Section5-text: Dies ist ein Test
+
+----
+
+Section6-headline: Streitschlichtung
+
+----
+
+Section6-text: Dies ist ein Test
+
+----
+
+Section7-headline: Haftung für Inhalte
+
+----
+
+Section7-text: Dies ist ein Test
+
+----
+
+Section8-headline: Haftung für Links
+
+----
+
+Section8-text: Dies ist ein Test
+
+----
+
+Section9-headline: Urheberrecht
+
+----
+
+Section9-text: Dies ist ein Test
+
+----
+
+Uuid: 2yalmvtlmqlbn8mu
