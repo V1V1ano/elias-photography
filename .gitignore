@@ -50,4 +50,17 @@ Icon
 /site/config/.license
 /site/config/config.starterkit.test.php
 
-/content/*
+
+**/node_modules
+site/config/env.php
+
+**/.git*
+**/.git*/**
+**/node_modules/**
+content/**
+media/**
+site/cache/**
+site/**/index.html
+
+
+**/*.sqlite
