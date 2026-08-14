@@ -9,7 +9,11 @@
   $alts = [];
 
   foreach ($images as $img) {
-    $urls[] = $img->url();
+    // Serve a resized thumbnail instead of the multi-megabyte original.
+    // 2000px on the long edge is plenty for retina full-screen viewing;
+    // Kirby caches the thumbnail on first request under /media/, so
+    // subsequent visits are served from disk without re-processing.
+    $urls[] = $img->resize(2000)->url();
     $alts[] = $img->alt()->or($img->filename())->value();
   }
 
@@ -34,6 +38,8 @@
                 class="snapshots-img"
                 src="<?= esc($urls[0]) ?>"
                 alt="<?= esc($alts[0] ?? '') ?>"
+                decoding="async"
+                fetchpriority="high"
                 data-urls='<?= esc(json_encode($urls), 'attr') ?>'
                 data-alts='<?= esc(json_encode($alts), 'attr') ?>'
             />
@@ -67,11 +73,28 @@
 
     let i = 0;
 
+    // Warm the browser cache for a given index (wraps around) so
+    // clicking prev/next feels instant instead of triggering a fresh
+    // network round-trip each time.
+    function preload(idx) {
+      const n = urls.length;
+      if (n <= 1) return;
+      const k = ((idx % n) + n) % n;
+      const im = new Image();
+      im.src = urls[k];
+    }
+
     function render() {
       img.src = urls[i];
       img.alt = alts[i] || "";
       if (countEl) countEl.textContent = String(i + 1);
+      preload(i + 1);
+      preload(i - 1);
     }
+
+    // Kick off the very first neighbour preload without waiting for the
+    // first user interaction.
+    preload(1);
 
     function prev() {
       i = (i - 1 + urls.length) % urls.length;
