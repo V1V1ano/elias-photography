@@ -178,18 +178,23 @@ html:has(.home-project-list) .home-project-item {
 }
 
 @media (min-width: 60rem) {
-  /* cap image height to the space between header and footer,
-     keep aspect ratio, keep scroll-snap behavior */
+  /* Cap the figure to the space between header and footer, but as a
+     *max*-height (not a fixed height) so a shorter landscape image
+     lets the figure box shrink around it instead of leaving empty
+     space above/below the picture. */
   .home-project-figure {
-    height: calc(100vh - var(--header-chrome) - var(--footer-chrome));
-    height: calc(100svh - var(--header-chrome) - var(--footer-chrome));
+    max-height: calc(100vh - var(--header-chrome) - var(--footer-chrome));
+    max-height: calc(100svh - var(--header-chrome) - var(--footer-chrome));
   }
 
-  .home-project-img {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-  }
+  /* No desktop override on `.home-project-img` on purpose: the base
+     rule (max-width: 100%, max-height: viewport-chrome, width/height:
+     auto) already produces aspect-preserving sizing.
+     - Portrait images hit `max-height` first, fill the vertical
+       space, and get a narrow proportional width -- unchanged.
+     - Landscape images now hit `max-width` first (the link caps at
+       60rem), and their height scales down proportionally instead of
+       staying at 100% and squishing the image horizontally. */
 }
 
 .home-project-caption {

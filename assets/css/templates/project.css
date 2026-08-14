@@ -104,6 +104,12 @@
         align-self: stretch;
         height: 100%;
         min-width: 0;
+        /* Cap the image column so landscape (horizontal) title images
+           can't grow wider than 70% of the hero row and push the text
+           off to the side. Portrait images stay narrower than this
+           naturally (their `width: auto` at full height is small), so
+           the cap only affects horizontals. */
+        max-width: 70%;
         flex: 0 1 auto;
         display: flex;
         overflow: hidden;
